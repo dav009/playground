@@ -6,3 +6,9 @@ resource "aws_s3_bucket" "some_bucket" {
     Environment = "Dev"
   }
 }
+
+
+module "another_s3" {
+  source  = "../modules/dummy"
+  name = "another dummy"
+}
